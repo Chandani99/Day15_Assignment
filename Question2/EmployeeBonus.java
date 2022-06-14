@@ -15,9 +15,8 @@ public class EmployeeBonus {
 		
 		LocalDate ld1=LocalDate.now() ;
 		
-		Period p=Period.between(ld1,ld);
-		
-		if(p.getYears()<1) {
+		Period p=Period.between(ld,ld1);
+		if(p.getYears()<1 && p.getDays()>=1 && p.getMonths()>=1) {
 			
 			return 5000;
 		}
